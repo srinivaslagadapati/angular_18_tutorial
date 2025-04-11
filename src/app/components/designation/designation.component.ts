@@ -13,12 +13,16 @@ export class DesignationComponent implements OnInit {
 
   designationList: IDesignaion[]=[] ;
   masterService= inject(MasterService);
-  
+  isLoader:boolean = true;
 
   ngOnInit(): void {
     
     this.masterService.gerDesignationList().subscribe((result: APIResponseModel)=>{
       this.designationList= result.data;
+      this.isLoader = false;
+    },error=>{
+      alert("API error");
+      this.isLoader = false;
     })
   }
 }
