@@ -1,0 +1,74 @@
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Role Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of roleList; let srNo=index">
+                    <td>
+                           {{srNo}} 
+                    </td>
+                    <td>
+                        {{role.role}} 
+                 </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+<!-- <div>
+    <p>roles works!</p>
+
+    <div class="row">
+    <div class="col-3">
+    <p> {{firstName}} </p> 
+    </div>
+    <div class="col-3">
+    <p>{{lastName}} </p> 
+    </div>
+        <div class="col-3">
+        <p>  {{todayDate}} </p> 
+        </div>
+        <div class="col-3">
+            <p>  {{selectState}} </p> 
+        </div>
+        </div>
+        <div class="row">
+            <input type="text" name="firstName" [value]=firstName class="form-control"/>
+        </div>
+        <div class="row">
+            <input type="text"  [(ngModel)]=firstName />
+        </div>
+        <div class="row">State
+            <select [(ngModel)]="selectState">
+                <option>TX</option>
+                <option>WA</option>
+                <option>MA</option>
+            </select>
+        </div>
+        <div class="row">
+            <input [type]=typeBox />
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-success" (onClick)="showMessage1()">click</button>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-success" (onClick)="showMessage('function success')">click</button>
+            </div>  
+        </div>
+</div> -->

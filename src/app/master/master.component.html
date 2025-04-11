@@ -1,0 +1,21 @@
+
+
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="btn-group">
+            <button type="button" (click)="selectedTab('Roles')" class="btn" 
+            [ngClass]="tabSelected == 'Roles' ? 'btn-success' :'btn-primary' ">Roles</button>
+            <button type="button" (click)="selectedTab('Designations')" class="btn" 
+            [ngClass]="tabSelected == 'Designations' ? 'btn-success' :'btn-primary' ">Designations</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center" *ngIf="tabSelected == 'Roles'">
+        <app-roles></app-roles>
+    </div>
+    <div class="col-12 text-center" *ngIf="tabSelected == 'Designations'">
+        <app-designation></app-designation>
+    </div>
+</div>
